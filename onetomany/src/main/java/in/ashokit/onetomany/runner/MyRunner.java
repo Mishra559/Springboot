@@ -32,31 +32,18 @@ public class MyRunner implements ApplicationRunner {
     public void run(ApplicationArguments args) throws Exception {
         //saveCustomer();
 
-        //removeCustomer();
-
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter customer ID");
-        int id = scanner.nextInt();
-//        Customers c = findCustomerById(id);
-//        System.out.println(c.getName());
-//        System.out.println(c.getId());
-//        c.getOrders().forEach(System.out::println);
-
-        deleteCustomerById(id);
-        System.out.println("Customer with ID " + id + " has been deleted");
-
-
+        
     }
 
     private void saveCustomer(){
 
         List<Order> lstOrders = Arrays.asList(
-                new Order(10107L, LocalDate.of(2026,1,3), OrderStatus.DELIVERED),
-                new Order(10108L, LocalDate.of(2026,2,14), OrderStatus.PLACED),
-                new Order(10109L, LocalDate.of(2026,3,2), OrderStatus.PENDING)
+                new Order(10179L, LocalDate.of(2026,1,3), OrderStatus.DELIVERED),
+                new Order(10168L, LocalDate.of(2026,2,14), OrderStatus.PLACED),
+                new Order(101754L, LocalDate.of(2026,3,2), OrderStatus.PENDING)
         );
         Customers customers = new Customers();
-        customers.setId(103);
+        customers.setId(102);
         customers.setName("David");
         customers.setOrders(lstOrders);
 
