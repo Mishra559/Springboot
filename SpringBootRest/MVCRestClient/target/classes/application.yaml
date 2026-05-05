@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: MVCRestClient
+  main:
+    banner-mode: 'off'
+
+
+server:
+  port: 8989

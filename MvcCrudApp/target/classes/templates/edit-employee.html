@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Employee</title>
+</head>
+<body>
+<h1>Edit Employee</h1>
+
+<form th:action="@{'/update'(empno=${employee.id})}" th:object="${employee}" method="post">
+
+    <input type="hidden" th:field="*{id}">
+
+
+    Employee name : <input type="text"  th:field="*{ename}" /><br>
+    <span th:if="${#fields.hasErrors('ename')}" th:errors="*{ename}"></span> <br>
+
+    Salary : <input type="text"  th:field="*{salary}" /><br>
+    <span th:if="${#fields.hasErrors('salary')}" th:errors="*{salary}"></span> <br>
+
+    Department : <input type="text"  th:field="*{department}" /><br>
+    <span th:if="${#fields.hasErrors('department')}" th:errors="*{department}"></span> <br>
+
+    <button type="submit">Update</button>
+</form>
+
+</body>
+</html>

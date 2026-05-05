@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Success Page</title>
+</head>
+<body>
+<h2>Employee is saved to a Database</h2>
+<br>
+<p>The Employee details</p>
+<table border="1">
+    <tr>
+        <th>EMPNO</th> <TH>ENAME</TH> <TH>SAL</TH> <TH>DEPARTMENT</TH>
+    </tr>
+    <tr>
+        <td th:text="${employee.empno}"></td>
+        <td th:text="${employee.ename}"></td>
+        <td th:text="${employee.sal}"></td>
+        <td th:text="${employee.department}"></td>
+    </tr>
+</table>
+</body>
+</html>

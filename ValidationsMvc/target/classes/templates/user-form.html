@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>User Form</title>
+</head>
+<body>
+<h1>User Form</h1>
+        <form th:action="@{/register}" method="post" th:object="${user}">
+            Username: <input type="text" th:field="*{username}"><br>
+            <span style="color : red;" th:if="${#fields.hasErrors('username')}" th:errors="*{username}"> </span> <br>
+
+            Email : <input type="email" th:field="*{email}"><br>
+            <span style="color : red;" th:if="${#fields.hasErrors('email')}"  th:errors="*{email}"> </span> <br>
+
+            Mobile:  <input type="text" th:field="*{mobile}"><br>
+            <span style="color : red;" th:if="${#fields.hasErrors('mobile')}"  th:errors="*{mobile}"> </span> <br>
+
+            Gender: <input type="radio" value = "Male"  th:field="*{gender}">Male
+                    <input type="radio" value = "Female"  th:field="*{gender}">Female
+                    <input type="radio" value = "Other"  th:field="*{gender}">Other<br>
+            <span style="color : red;" th:if="${#fields.hasErrors('gender')}"  th:errors="*{gender}"> </span> <br>
+
+
+            Date Of Birth: <input type="date" th:field="*{dateOfBirth}"><br>
+            <span style="color : red;" th:if="${#fields.hasErrors('dateOfBirth')}"  th:errors="*{dateOfBirth}"> </span> <br>
+
+
+            <button type="submit">Submit</button>
+
+
+</form>
+</body>
+
+</html>
